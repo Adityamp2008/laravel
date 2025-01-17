@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('aditt', function (Blueprint $table) {
+        Schema::create('masuk', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->timestamps();
+            $table->string('masuk', 50);
+            $table->date('keluar');
+            $table->text('jumlah',);
+            $table->text('keuntungan');
+            $table->text('total');
         });
     }
 
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('aditt');
+        //
     }
 };
