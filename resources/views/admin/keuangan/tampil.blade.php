@@ -20,13 +20,13 @@
             </tr>
           </thead>
           <?php $nomor = 1; ?>
-            @foreach ($keuangan as $keuangan)
+            @foreach ($keuangan as $item)
             <tr>
               <th scope="row">{{ $nomor++ }}</th>
-              <td>{{ $keuangan->masuk }}</td>
-              <td>{{ $keuangan->keluar }}</td> 
+              <td>{{ $item->masuk }}</td>
+              <td>{{ $item->keluar }}</td> 
               <td>
-               <a href="{{ route('admin.keuangan.edit', ['id' => $keuangan->id]) }}" class="btn btn-primary">Edit</a>
+                <a href="{{ route('keuangan.edit', $keuangan->id) }}" class="btn btn-primary">Edit</a>
 
                 <a href="/admin/keuangan/tampil/delete/{{$keuangan->id}}" class="btn btn-primary">hapus</a>
               </td>

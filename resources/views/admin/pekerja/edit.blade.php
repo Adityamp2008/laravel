@@ -10,17 +10,17 @@
     <h1>Edit Barang</h1>
       
     <!-- Form untuk edit barang -->
-    <form action="{{ route('admin.barang.tampil') }}"method="POST">
+    <form action="{{ route('admin.pekerja.tampil') }}"method="POST">
       @csrf
 <!-- Menambahkan method PATCH untuk update -->
 
       <!-- Menyembunyikan id barang untuk pengiriman -->
-      <input type="hidden" name="id" value="{{ $barang->id }}">
+      <input type="hidden" name="id" value="{{ $pekerja->id }}">
 
       <!-- Nama Barang -->
       <div class="form-group">
         <label for="nama_barang">Nama Barang</label>
-        <input type="text" class="form-control" name="nama_barang" id="nama_barang" value="{{ $barang->nama_barang}}" placeholder="Masukkan nama barang" required>
+        <input type="text" class="form-control" name="nama_pekerja" id="nama_pekerja" value="{{ $pekerja->nama_pekerja}}" placeholder="Masukkan nama barang" required>
       </div>
 
       <!-- Tanggal Datang -->
@@ -33,7 +33,7 @@
       <div class="form-group">
         <label for="jenis">Jenis Barang</label>
         <select class="form-select" name="jenis" id="jenis" required>
-          <option value="padat" {{ $barang->jenis}}>Padat</option>
+          <option value="padat" {{ $pekerja->jenis}}>Padat</option>
           <option value="cair" {{ $barang->jenis}}>Cair</option>
         </select>
       </div>

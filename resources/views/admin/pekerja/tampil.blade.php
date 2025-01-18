@@ -14,26 +14,26 @@
         <thead class="table-dark">
             <tr>
               <th scope="col">no</th>
-              <th scope="col">nama barang</th>
-              <th scope="col">stok</th>
-              <th scope="col">harga</th>
+              <th scope="col">nama pekerja</th>
+              <th scope="col">umur</th>
+              <th scope="col">gaji</th>
               <th scope="col">aksi</th>
             </tr>
           </thead>
           <?php $nomor = 1; ?>
-            @foreach ($barang as $barang)
+            @foreach ($pekerja as $item)
             <tr>
               <th scope="row">{{ $nomor++ }}</th>
-              <td>{{ $barang->nama_barang }}</td>
-              <td>{{ $barang->tanggal_datang }}</td> 
-              <td>{{ $barang->jenis }}</td>
+              <td>{{ $item->nama_pekerja }}</td>
+              <td>{{ $item->umur }}</td> 
+              <td>{{ $item->gaji }}</td>
               <td>
-                <a href="{{ route('admin.barang.edit', $barang->id) }}" class="btn btn-primary">Edit</a>
-                <a href="/admin/barang/tampil/delete/{{$barang->id}}" class="btn btn-primary">hapus</a>
+                <a href="{{ route('admin.pekerja.edit', ['id' => $pekerja->id] )}}" class="btn btn-primary">Edit</a>
+                <a href="/admin/pekerja/tampil/delete/{{$item->id}}" class="btn btn-primary">hapus</a>
               </td>
             </tr>
             @endforeach
-            <a href="{{ asset('admin/barang/tambah')}}" >
+            <a href="{{ asset('admin/pakerja/tambah')}}" >
               <button class="btn btn-primary me-md-2" type="button">tambah</button>
             </a>
       </table>

@@ -10,24 +10,21 @@
     <title>tambahkan barang</title>
   </head>
   <body>
-    <h1>tambah barang</h1>
+    <h1>tambah pekerja</h1>
       
-<form  action="{{ route('admin.barang.post')}}" method="POST" enctype="multipart/form-data">
+<form  action="{{ route('admin.pekerja.post')}}" method="POST" enctype="multipart/form-data">
   @csrf
   <div class="form-group">
-    <label>nama</label>
-    <input type="text" class="form-control" name="nama_barang" id="nama_barang" placeholder="nama">
+    <label>nama pekerja</label>
+    <input type="text" class="form-control" name="nama_pekerja" id="nama_pekerja" placeholder="nama">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">tanggal datang</label>
-    <input type="date" class="form-control" name="tanggal_datang" id="tanggal_datang" placeholder="tanggal">
+    <label for="exampleFormControlInput1">umur pekerja</label>
+    <input type="text" class="form-control" name="umur" id="umur" placeholder="tanggal">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">pilih</label>
-    <select class="form-control" name="jenis" id="jenis">
-      <option value="padat">cair</option>
-      <option value="cair">padat</option>
-    </select>
+    <label for="exampleFormControlSelect1">gaji</label>
+    <input type="text" class="form-control" name="gaji" id="gaji" placeholder="tanggal">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

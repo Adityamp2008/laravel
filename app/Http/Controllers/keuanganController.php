@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\keuangan;
 use Illuminate\Http\Request;
-
+use App\models\keuangan;
+ 
 class keuanganController extends Controller
 {
     //
@@ -12,13 +12,12 @@ class keuanganController extends Controller
     {
         $keuangan = keuangan::all();
         return view('admin.keuangan.tampil', compact('keuangan'));
-    }    
+    }
     public function tambah(){
         return view('admin.keuangan.tambah');
-        }
-        public function edit($id)
+        } public function edit($id)
         {
-            $keuangan = keuangan::findOrFail($id);
+            $barang = keuangan::find($id);
             return view('admin.keuangan.edit', compact('keuangan'));
         }
         public function update(Request $request, $id)
@@ -31,6 +30,8 @@ class keuanganController extends Controller
             ]);
             return redirect()->route('admin.keuangan.tampil')->with('success', 'Barang berhasil diupdate');
         }
+    
+
     public function post(request $req)
     {
         $id=$req->get('id');
@@ -53,7 +54,6 @@ class keuanganController extends Controller
     {
         $keuangan = keuangan::findOrFail($id);
         $keuangan->delete();
-
-        return redirect()->route('admin.keuangan.tampil');
+ return redirect()->route('admin.keuangan.tampil');
     }
 }
