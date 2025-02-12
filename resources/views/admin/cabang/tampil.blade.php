@@ -8,7 +8,7 @@
     <title>admin cabang</title>
   </head>
   <body>
-    <h1 style="text-align: center">barang barang</h1>
+    <h1 style="text-align: center">nama cabang</h1>
     <div class="shadow p-3 mb-5 bg-body rounded">
       <table class="table">
         <thead class="table-dark">

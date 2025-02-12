@@ -15,7 +15,8 @@ class barangController extends Controller
     }
     public function tambah(){
         return view('admin.barang.tambah');
-        } public function edit($id)
+        }
+         public function edit($id)
         {
             $barang = Barang::findOrFail($id);
             return view('admin.barang.edit', compact('barang'));

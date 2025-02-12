@@ -15,7 +15,8 @@ class pekerjaController extends Controller
     }
     public function tambah(){
         return view('admin.pekerja.tambah');
-        } public function edit($id)
+        }
+         public function edit($id)
         {
             $pekerja = pekerja::findOrFail($id);
             return view('admin.pekerja.edit', compact('pekerja'));

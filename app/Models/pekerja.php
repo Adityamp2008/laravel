@@ -8,9 +8,9 @@ class pekerja extends Model
 {
     //
     protected $table="pekerja";
-    protected $primaryKey="id_";
+    protected $primaryKey="id";
      public $timestamps=false;
-     protected $guarded = ['id_pekerja'];
+     protected $guarded = ['pekerja'];
 
        protected $fillable = ['nama_pekerja'];
     

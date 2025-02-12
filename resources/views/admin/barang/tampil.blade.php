@@ -15,8 +15,8 @@
             <tr>
               <th scope="col">no</th>
               <th scope="col">nama barang</th>
-              <th scope="col">stok</th>
-              <th scope="col">harga</th>
+              <th scope="col">tanggal dateng</th>
+              <th scope="col">jenis</th>
               <th scope="col">aksi</th>
             </tr>
           </thead>

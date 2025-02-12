@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,35 +8,37 @@
     <title>admin barang</title>
   </head>
   <body>
-    <h1 style="text-align: center">barang barang</h1>
+    <h1 style="text-align: center">Barang Barang</h1>
     <div class="shadow p-3 mb-5 bg-body rounded">
       <table class="table">
         <thead class="table-dark">
             <tr>
-              <th scope="col">no</th>
-              <th scope="col">nama pekerja</th>
-              <th scope="col">umur</th>
-              <th scope="col">gaji</th>
-              <th scope="col">aksi</th>
+              <th scope="col">No</th>
+              <th scope="col">Nama Pekerja</th>
+              <th scope="col">Umur</th>
+              <th scope="col">Gaji</th>
+              <th scope="col">Aksi</th>
             </tr>
-          </thead>
+        </thead>
+        <tbody>
           <?php $nomor = 1; ?>
-            @foreach ($pekerja as $item)
+          @foreach ($pekerja as $item)
             <tr>
               <th scope="row">{{ $nomor++ }}</th>
               <td>{{ $item->nama_pekerja }}</td>
               <td>{{ $item->umur }}</td> 
               <td>{{ $item->gaji }}</td>
               <td>
-                <a href="{{ route('admin.pekerja.edit', ['id' => $pekerja->id] )}}" class="btn btn-primary">Edit</a>
-                <a href="/admin/pekerja/tampil/delete/{{$item->id}}" class="btn btn-primary">hapus</a>
+                <a href="{{ route('admin.pekerja.edit', ['id' => $item->id]) }}" class="btn btn-primary">Edit</a>
+                <a href="/admin/pekerja/tampil/delete/{{$pekerja->id}}"  class="btn btn-primary me-md-2" >hapus</a>
               </td>
             </tr>
-            @endforeach
-            <a href="{{ asset('admin/pakerja/tambah')}}" >
-              <button class="btn btn-primary me-md-2" type="button">tambah</button>
-            </a>
+          @endforeach
+          <a href="{{ asset('admin/pekerja/tambah')}}" >
+        </tbody>
       </table>
+        <button class="btn btn-success me-md-2" type="button">Tambah</button>
+      </a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>

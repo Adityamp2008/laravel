@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\barangController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\dasboardController;
 use App\Http\Controllers\keuntunganController;
 use App\Http\Controllers\masukController;
+use App\Http\Controllers\pekerjaController;
 use App\Http\Controllers\pembelianController;
 use App\Http\Controllers\penjualanController;
 use App\Http\Controllers\ProfileController;
@@ -13,6 +15,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+
+
+//data dasboard
+Route::get('data-dasboard/tabel',[dasboardController::class,'datadasboard'])->name('data-dasboard.tabel');
+
+
+
+
+
+
+
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,6 +51,7 @@ route::get('/keluar',[masukController::class,'index'])->name('keluar');
 route::get('/keuntungan',[keuntunganController::class,'index'])->name('keuntungan');
 
 
+ 
 //routes barang
 Route::get('/admin/barang/tampil',[App\http\Controllers\barangController::class,'tampil'])->name('admin.barang.tampil');
 //edit
@@ -73,19 +94,24 @@ Route::patch('/admin/keuangan/update/{id}', [App\Http\Controllers\keuanganContro
 
 //routes pekerja
 
-Route::get('/admin/pekerja/tampil',[App\Http\Controllers\pekerjaController::class,'tampil'])->name('admin.pekerja.tampil');
-
-Route::get('/admin/pekerja/edit/{id}',[App\Http\Controllers\pekerjaController::class,'edit'])->name('admin.pekerja.edit');
-
-Route::get('/admin/pekerja/tambah',[App\Http\Controllers\pekerjaController::class,'tambah'])->name('admin.pekerja.tambah');
-
-Route::post('admin/pekerja/post',[App\Http\Controllers\pekerjaController::class,'post'])->name('admin.pekerja.post'); 
-
-Route::patch('/admin/pekerja/tampil/{id}', [App\Http\Controllers\pekerjaController::class, 'update'])->name('admin.pekerja.tampil');
-
+Route::get('/admin/pekerja/tampil',[App\http\Controllers\pekerjaController::class,'tampil'])->name('admin.pekerja.tampil');
+//edit
+Route::get('/admin/pekerja/edit/{id}', [App\Http\Controllers\pekerjaController::class, 'edit'])->name('admin.pekerja.edit');
+//hapus  
 Route::get('/admin/pekerja/tampil/delete/{id}', [App\Http\Controllers\pekerjaController::class, 'delete']);
+//tmabah
+Route::get('/admin/pekerja/tambah',[App\Http\Controllers\pekerjaController::class,'tambah'])->name('admin.pekerja.tambah');
+//tampil
+Route::post('/admin/pekerja/tampil',[App\Http\Controllers\pekerjaController::class,'post'])->name('admin.pekerja.post'); 
+//update
+Route::patch('admin/pekerja/update/{id}', [PekerjaController::class, 'update']);
 
-Route::get('admin/home',[App\Http\Controllers\AdminController::class,'admin']);
+
+
+route::get('page/data-barang',[App\Http\Controllers\DataBarangController::class,'barang'])->name('page/data-barang');
+route::get('page/data-cabang',[App\Http\Controllers\DatacabangController::class,'cabang'])->name('page/data-cabang');
+route::get('page/data-pekerja',[App\Http\Controllers\DatapekerjaController::class,'pekerja'])->name('page/data-pekerja');
+route::get('page/data-keuangan',[App\Http\Controllers\DatakeuanganController::class,'keuangan'])->name('page/data-keuangan');
 
 require __DIR__.'/auth.php';
  

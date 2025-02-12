@@ -10,36 +10,33 @@
     <h1>Edit Barang</h1>
       
     <!-- Form untuk edit barang -->
-    <form action="{{ route('admin.pekerja.tampil') }}"method="POST">
+    <form action="{{ route('admin.pekerja.update', $pekerja->id) }}" method="POST">
       @csrf
-<!-- Menambahkan method PATCH untuk update -->
+      @method('PATCH')
 
       <!-- Menyembunyikan id barang untuk pengiriman -->
       <input type="hidden" name="id" value="{{ $pekerja->id }}">
 
       <!-- Nama Barang -->
       <div class="form-group">
-        <label for="nama_barang">Nama Barang</label>
+        <label for="nama_barang">Nama pekerja</label>
         <input type="text" class="form-control" name="nama_pekerja" id="nama_pekerja" value="{{ $pekerja->nama_pekerja}}" placeholder="Masukkan nama barang" required>
       </div>
 
       <!-- Tanggal Datang -->
       <div class="form-group">
-        <label for="tanggal_datang">Tanggal Datang</label>
-        <input type="date" class="form-control" name="tanggal_datang" id="tanggal_datang" value="{{  $barang->tanggal_datang }}" required>
+        <label for="tanggal_datang">umur</label>
+        <input type="text" class="form-control" name="umur" id="umur" value="{{  $pekerja->umur }}" required>
       </div>
 
-      <!-- Jenis Barang -->
       <div class="form-group">
-        <label for="jenis">Jenis Barang</label>
-        <select class="form-select" name="jenis" id="jenis" required>
-          <option value="padat" {{ $pekerja->jenis}}>Padat</option>
-          <option value="cair" {{ $barang->jenis}}>Cair</option>
-        </select>
+        <label for="tanggal_datang">gajihhh</label>
+        <input type="number" class="form-control" name="gaji" id="gaji" value="{{  $pekerja->gaji }}" required>
       </div>
+
 
       <!-- Tombol Submit -->
-      <button type="submit" class="btn btn-primary">Update Barang</button>
+      <button type="submit" class="btn btn-primary">Update pekerja</button>
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
