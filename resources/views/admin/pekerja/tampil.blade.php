@@ -29,8 +29,8 @@
               <td>{{ $item->umur }}</td> 
               <td>{{ $item->gaji }}</td>
               <td>
-                <a href="{{ route('admin.pekerja.edit', ['id' => $item->id]) }}" class="btn btn-primary">Edit</a>
-                <a href="/admin/pekerja/tampil/delete/{{$pekerja->id}}"  class="btn btn-primary me-md-2" >hapus</a>
+                <a href="{{ route('admin.pekerja.edit', $item->id) }}"  class="btn btn-primary me-md-2" >edit</a>
+                <a href="/admin/pekerja/tampil/delete/{{$item->id}}"  class="btn btn-primary me-md-2" >hapus</a>
               </td>
             </tr>
           @endforeach

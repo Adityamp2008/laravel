@@ -25,8 +25,8 @@
   <div class="form-group">
     <label for="exampleFormControlSelect1">pilih</label>
     <select class="form-control" name="jenis" id="jenis">
-      <option value="padat">cair</option>
-      <option value="cair">padat</option>
+      <option value="cair">cair</option>
+      <option value="padat">padat</option>
     </select>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>

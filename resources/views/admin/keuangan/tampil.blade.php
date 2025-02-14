@@ -26,7 +26,8 @@
               <td>{{ $item->masuk }}</td>
               <td>{{ $item->keluar }}</td> 
               <td>
-               
+                <a href="{{ route('admin.keuangan.edit', $item->id) }}"  class="btn btn-primary me-md-2" >edit</a>
+                <a href="/admin/keuangan/tampil/delete/{{$item->id}}"  class="btn btn-primary me-md-2" >hapus</a>
               </td>
             </tr>
             @endforeach

@@ -83,12 +83,13 @@ Route::get('/admin/cabang/tampil/delete/{id}', [App\Http\Controllers\cabangContr
 //routes keuangan
 Route::get('/admin/keuangan/tampil',[App\Http\Controllers\keuanganController::class,'tampil'])->name('admin.keuangan.tampil');
 
-Route::get('keuangan/edit/{id}', [App\Http\Controllers\KeuanganController::class, 'edit'])->name('keuangan.edit');
+Route::get('/admin/keuangan/edit/', [App\Http\Controllers\KeuanganController::class, 'edit'])->name('admin.keuangan.edit');
 
+Route::get('/admin/keuangan/tampil/delete/{id}', [App\Http\Controllers\keuanganController::class, 'delete']);
 
 Route::get('/admin/keuangan/tambah',[App\Http\Controllers\keuanganController::class,'tambah'])->name('admin.keuangan.tambah');
 
-Route::post('admin/keuangan/post',[App\Http\Controllers\keuanganController::class,'post'])->name('admin.keuangan.post'); 
+Route::post('/admin/keuangan/post',[App\Http\Controllers\keuanganController::class,'post'])->name('admin.keuangan.post'); 
 
 Route::patch('/admin/keuangan/update/{id}', [App\Http\Controllers\keuanganController::class, 'update'])->name('admin.keuangan.update');
 

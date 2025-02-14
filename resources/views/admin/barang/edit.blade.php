@@ -33,8 +33,8 @@
       <div class="form-group">
         <label for="jenis">Jenis Barang</label>
         <select class="form-select" name="jenis" id="jenis" required>
-          <option value="padat" {{ $barang->jenis}}>Padat</option>
-          <option value="cair" {{ $barang->jenis}}>Cair</option>
+          <option value="padat">Padat</option>
+          <option value="cair">Cair</option>
         </select>
       </div>
 
