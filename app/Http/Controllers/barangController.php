@@ -23,7 +23,7 @@ class barangController extends Controller
         }
         public function update(Request $request, $id)
         {
-            // Temukan barang berdasarkan ID
+            
             $barang = Barang::findOrFail($id);
             $barang->update([
                 'nama_barang' => $request->nama_barang,

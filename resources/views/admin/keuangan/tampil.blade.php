@@ -26,12 +26,13 @@
               <td>{{ $item->masuk }}</td>
               <td>{{ $item->keluar }}</td> 
               <td>
-                <a href="{{ route('admin.keuangan.edit', $item->id) }}"  class="btn btn-primary me-md-2" >edit</a>
+                <a href="{{ route('admin.keuangan.edit', ['id' => $item->id]) }}">Edit</a>
                 <a href="/admin/keuangan/tampil/delete/{{$item->id}}"  class="btn btn-primary me-md-2" >hapus</a>
               </td>
             </tr>
             @endforeach
-            <a href="{{ asset('admin/keuangan/tambah')}}" >
+            <a href="{{ route('admin.keuangan.tambah') }}" >
+
               <button class="btn btn-primary me-md-2" type="button">tambah</button>
             </a>
       </table>

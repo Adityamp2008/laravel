@@ -7,30 +7,31 @@
     <title>Edit Barang</title>
   </head>
   <body>
-    <h1>Edit Barang</h1>
+    <h1>Edit pekerja</h1>
       
     <!-- Form untuk edit barang -->
-    <form action="{{ route('admin.pekerja.update', $pekerja->id) }}" method="POST">
+    <form action="{{ route('admin.pekerja.update',$pekerja->id) }}" method="POST">
       @csrf
       @method('PATCH')
+      
 
       <!-- Menyembunyikan id barang untuk pengiriman -->
       <input type="hidden" name="id" value="{{ $pekerja->id }}">
 
       <!-- Nama Barang -->
       <div class="form-group">
-        <label for="nama_barang">Nama pekerja</label>
+        <label for="nama_pekerja">Nama pekerja</label>
         <input type="text" class="form-control" name="nama_pekerja" id="nama_pekerja" value="{{ $pekerja->nama_pekerja}}" placeholder="Masukkan nama barang" required>
       </div>
 
       <!-- Tanggal Datang -->
       <div class="form-group">
-        <label for="tanggal_datang">umur</label>
+        <label for="umur">umur</label>
         <input type="text" class="form-control" name="umur" id="umur" value="{{  $pekerja->umur }}" required>
       </div>
 
       <div class="form-group">
-        <label for="tanggal_datang">gajihhh</label>
+        <label for="gaji">gajihhh</label>
         <input type="number" class="form-control" name="gaji" id="gaji" value="{{  $pekerja->gaji }}" required>
       </div>
 

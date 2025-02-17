@@ -10,21 +10,22 @@
     <h1>Edit keuangan</h1>
       
     <!-- Form untuk edit keuangan -->
-    <form action="{{ route('admin.keuangan.post') }}"method="POST">
+    <form action="{{ route('admin.keuangan.update',$keuangan->id) }}"method="POST">
       @csrf
+      @method('PATCH')
 
-      <input type="hidden" name="id" value="{{ $uang->id }}">
+      <input type="hidden" name="id" value="{{ $keuangan->id }}">
 
 
       <div class="form-group">
-        <label for="nama_keuangan">masuk</label>
-        <input type="text" class="form-control" name="nama_keuangan" id="nama_keuangan" value="{{ $keuangan->masuk}}" placeholder="Masukkan nama keuangan" required>
+        <label for="masuk">masuk</label>
+        <input type="text" class="form-control" name="masuk" id="masuk" value="{{ $keuangan->masuk}}" placeholder="Masuk" required>
       </div>
 
 
       <div class="form-group">
-        <label for="tanggal_datang">keluar</label>
-        <input type="date" class="form-control" name="tanggal_datang" id="tanggal_datang" value="{{  $keuangan->keluar }}" required>
+        <label for="keluar">keluar</label>
+        <input type="text" class="form-control" name="keluar" id="keluar" value="{{  $keuangan->keluar }}" required>
       </div>
 
       <!-- Tombol Submit -->

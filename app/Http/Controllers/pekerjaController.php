@@ -25,12 +25,12 @@ class pekerjaController extends Controller
         {
             // Temukan barang berdasarkan ID
             $pekerja = pekerja::findOrFail($id);
-            $pekerja->tampil([
+            $pekerja->update([
                 'nama_pekerja' => $request->nama_pekerja,
                 'umur' => $request->umur,
                 'gaji' => $request->gaji,
             ]);
-            return redirect()->route('admin.pekerja.tampil')->with('success', 'Barang berhasil diupdate');
+            return redirect()->route('admin.pekerja.tampil');
         }
     
 

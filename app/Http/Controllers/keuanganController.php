@@ -20,7 +20,7 @@ class keuanganController extends Controller
         
         public function edit($id)
         {
-            $barang = keuangan::findOrFail($id);
+            $keuangan = keuangan::findOrFail($id);
             return view('admin.keuangan.edit', compact('keuangan'));
         }
 
@@ -33,7 +33,7 @@ class keuanganController extends Controller
                 'masuk' => $request->masuk,
                 'keluar' => $request->keluar,
             ]);
-            return redirect()->route('admin.keuangan.tampil')->with('success', 'Barang berhasil diupdate');
+            return redirect()->route('admin.keuangan.tampil');
         }
     
 
@@ -42,9 +42,6 @@ class keuanganController extends Controller
         $id=$req->get('id');
         if($id){
             $keuangan = keuangan::findOrFail($id);
-        }
-        else{
-            $keuangan = new keuangan();
         }
 
 
@@ -59,6 +56,7 @@ class keuanganController extends Controller
     {
         $keuangan = keuangan::findOrFail($id);
         $keuangan->delete();
+
         return redirect()->route('admin.keuangan.tampil');
     }
 }

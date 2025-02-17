@@ -105,7 +105,7 @@ Route::get('/admin/pekerja/tambah',[App\Http\Controllers\pekerjaController::clas
 //tampil
 Route::post('/admin/pekerja/tampil',[App\Http\Controllers\pekerjaController::class,'post'])->name('admin.pekerja.post'); 
 //update
-Route::patch('admin/pekerja/update/{id}', [PekerjaController::class, 'update']);
+Route::patch('/admin/pekerja/update/{id}', [pekerjaController::class, 'update'])->name('admin.pekerja.update');;
 
 
 
