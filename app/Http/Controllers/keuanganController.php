@@ -43,11 +43,14 @@ class keuanganController extends Controller
         if($id){
             $keuangan = keuangan::findOrFail($id);
         }
+        else{
+            $keuangan = new keuangan();
+        }
 
 
         $keuangan = new keuangan;
         $keuangan->masuk = $req->masuk;
-        $keuangan->keluar = $req->keluar;
+        $keuangan->keluar = $req->keluar; 
     $keuangan->save();
     return redirect()->route('admin.keuangan.tampil');
     }

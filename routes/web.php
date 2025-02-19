@@ -53,9 +53,9 @@ route::get('/keuntungan',[keuntunganController::class,'index'])->name('keuntunga
 
  
 //routes barang
-Route::get('/admin/barang/tampil',[App\http\Controllers\barangController::class,'tampil'])->name('admin.barang.tampil');
+Route::get('/dasboard/barang-tampil',[App\http\Controllers\barangController::class,'tampil'])->name('admin.barang.tampil');
 //edit
-Route::get('/admin/barang/edit/{id}', [App\Http\Controllers\barangController::class, 'edit'])->name('admin.barang.edit');
+Route::get('/dasboard/barang-edit/{id}', [App\Http\Controllers\barangController::class, 'edit'])->name('admin.barang.edit');
 //hapus  
 Route::get('/admin/barang/tampil/delete/{id}', [App\Http\Controllers\barangController::class, 'delete']);
 //tmabah
@@ -67,7 +67,7 @@ Route::patch('/admin/barang/update/{id}', [BarangController::class, 'update'])->
 
 //routes cabang
 
-Route::get('/admin/cabang/tampil',[App\Http\Controllers\cabangController::class,'tampil'])->name('admin.cabang.tampil');
+Route::get('/dasboard/cabang-tampil',[App\Http\Controllers\cabangController::class,'tampil'])->name('admin.cabang.tampil');
 
 Route::get('/admin/cabang/edit/{id}',[App\Http\Controllers\cabangController::class,'edit'])->name('admin.cabang.edit');
 
@@ -81,9 +81,9 @@ Route::get('/admin/cabang/tampil/delete/{id}', [App\Http\Controllers\cabangContr
 
 
 //routes keuangan
-Route::get('/admin/keuangan/tampil',[App\Http\Controllers\keuanganController::class,'tampil'])->name('admin.keuangan.tampil');
+Route::get('/dasboard/keuangan-tampil',[App\Http\Controllers\keuanganController::class,'tampil'])->name('admin.keuangan.tampil');
 
-Route::get('/admin/keuangan/edit/', [App\Http\Controllers\KeuanganController::class, 'edit'])->name('admin.keuangan.edit');
+Route::get('/admin/keuangan/edit/{id}', [App\Http\Controllers\KeuanganController::class,'edit'])->name('admin.keuangan.edit');
 
 Route::get('/admin/keuangan/tampil/delete/{id}', [App\Http\Controllers\keuanganController::class, 'delete']);
 
@@ -95,7 +95,7 @@ Route::patch('/admin/keuangan/update/{id}', [App\Http\Controllers\keuanganContro
 
 //routes pekerja
 
-Route::get('/admin/pekerja/tampil',[App\http\Controllers\pekerjaController::class,'tampil'])->name('admin.pekerja.tampil');
+Route::get('/dasboard/pekerja-tampil',[App\http\Controllers\pekerjaController::class,'tampil'])->name('admin.pekerja.tampil');
 //edit
 Route::get('/admin/pekerja/edit/{id}', [App\Http\Controllers\pekerjaController::class, 'edit'])->name('admin.pekerja.edit');
 //hapus  
