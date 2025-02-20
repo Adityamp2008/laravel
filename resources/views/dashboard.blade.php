@@ -38,12 +38,11 @@
                 <div class="sidebar-brand-text mx-3">Pemula<sup>&#128526;</sup></div>
             </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
