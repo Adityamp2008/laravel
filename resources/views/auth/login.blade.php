@@ -31,7 +31,7 @@
                   @error('email')
                     <span class="text-danger">{{ $message }}</span>
                   @enderror
-                </div>
+                </div> 
 
                 <!-- Input Password -->
                 <div class="form-group">
