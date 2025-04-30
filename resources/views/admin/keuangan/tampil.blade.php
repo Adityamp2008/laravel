@@ -89,12 +89,7 @@
             </li>
 
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
+       
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -323,14 +318,11 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the .</p>
-
+                    <h1 class="h3 mb-2 text-gray-800">Tables keuangan</h1>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Data tabel             <a href="{{ asset('admin/keuangan/tambah')}}"> <button type="button" class="btn btn-primary">tambah</button></a>  </h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Data tabel             <a href="{{ asset('admin/keuangan/tambah')}}"> <button type="button" class="btn btn-primary m-3">tambah</button></a>  </h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

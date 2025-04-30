@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
+    <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,10 +24,10 @@
     <link href="{{ asset('admin-frontend/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
     {{-- icons botstap --}}
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-</head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    </head>
 
-<body id="page-top">
+    <body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -43,8 +43,8 @@
                 <div class="sidebar-brand-text mx-3">Pemula<sup>&#128526;</sup></div>
             </a>
 
-               <!-- #region -->
-               <li class="nav-item">
+                <!-- #region -->
+                <li class="nav-item">
                 <a class="nav-link" href="/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -79,12 +79,7 @@
             </li>
 
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>akun users</span></a>
-            </li>
+        
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -313,14 +308,12 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the .</p>
+                    <h1 class="h3 mb-2 text-gray-800">Tables barang</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Data tabel             <a href="{{ asset('admin/barang/tambah')}}"> <button type="button" class="btn btn-primary">tambah</button></a>  </h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Data tabel<a href="{{ asset('admin/barang/tambah')}}"> <button type="button" class="btn btn-primary m-3">tambah</button></a>  </h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -343,11 +336,11 @@
                                             <td>{{ $item->tanggal_datang }}</td> 
                                             <td>{{ $item->jenis }}</td>
                                             <td>
-                                              <a href="{{ route('admin.barang.edit', $item->id) }}"  class="btn btn-warning me-md-2" ><b class="bi bi-pencil"></b></a>
-                                              <a href="/admin/barang/tampil/delete/{{$item->id}}"  class="btn btn-danger me-md-2" ><b class="bi bi-trash"></b></a>
+                                                <a href="{{ route('admin.barang.edit', $item->id) }}"  class="btn btn-warning me-md-2" ><b class="bi bi-pencil"></b></a>
+                                                <a href="/admin/barang/tampil/delete/{{$item->id}}"  class="btn btn-danger me-md-2" ><b class="bi bi-trash"></b></a>
                                             </td>
-                                          </tr>
-                                          @endforeach
+                                            </tr>
+                                            @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -389,7 +382,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
@@ -418,6 +411,6 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('admin-frontend/js/demo/datatables-demo.js')}}"></script>
 
-</body>
+    </body>
 
-</html>
+    </html>
